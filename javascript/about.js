@@ -2,7 +2,6 @@ function sleep(ms){
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-//here is where the phrases are put
 const phrases = ["coding","playing the piano","pragraming","music","drawing","playing chess","photography"]
 
 const el = document.getElementById("typewriter") 
