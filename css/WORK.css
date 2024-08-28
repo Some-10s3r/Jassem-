@@ -28,6 +28,7 @@
     .work_content{width: 100%;}
 }
 .work_content .work-title{
+    font-size: 4rem;
     font-weight:500;
     margin-bottom: 15px;
     color: var(--head-titles);
@@ -35,7 +36,7 @@
 }
 .work_content .work-title span{font-size: 4rem;display: inline-block;transition: all .5s ease;transition-delay: .3s;}
 @media screen and (max-width:500px) {
-    .work_content .work-title,.work_content .work-title span{font-size: 1.5rem;}
+    .work_content .work-title,.work_content .work-title span{font-size: 1.5em;}
 }
 .work-slider{
     max-width: calc(var(--quantity)*20em);
