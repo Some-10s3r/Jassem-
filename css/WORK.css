@@ -1,0 +1,118 @@
+.work-section{
+    background: var(--Primary-bg);
+    height: 90vh;
+    width: 100%;
+    margin-bottom: 4em;
+    padding: 0 0 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.work-bg{
+    box-shadow: inset -5px -5px 10px var(--border-2), inset 5px 5px 10px var(--border-1);
+    width: 95%;
+    height: 100%;
+    background: var(--Secondary-bg);
+    border-radius: 20px;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+.work_content{
+    width: 65%;
+    height: 30%;
+}
+@media screen and (max-width:450px) {
+    .work_content{width: 100%;}
+}
+.work_content .work-title{
+    font-size: 4rem;
+    font-weight:500;
+    margin-bottom: 15px;
+    color: var(--head-titles);
+    text-shadow: 0 0 20px var(--head-titles);
+}
+.work_content .work-title span{font-size: 4rem;display: inline-block;transition: all .5s ease;transition-delay: .3s;}
+@media screen and (max-width:500px) {
+    .work_content .work-title span{font-size: 2em;}
+}
+.work-slider{
+    max-width: calc(var(--quantity)*20em);
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.work-slider .work-project{
+    height: 80%;
+    width: 15em;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 10px;
+    border: 1px solid var(--color-text);
+}
+/* work-title transitions and animations */
+.work-title:hover .char{animation: wiggly 2s infinite;}
+@keyframes wiggly {
+    0%,100%{translate:0 0px;}
+    50%{translate:0 5px;}
+}
+.work-title:hover .char{animation: wiggly 2s infinite ;transition-delay: none;animation-delay: .3s}
+.work-title:hover .char:nth-child(1){
+    animation: bar 1s forwards cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+@keyframes bar{
+    0%,50%,100%{transform: translate(0,0) rotate(0deg);}
+    20%,25%{transform: translate(-50%) rotate(-2deg);}
+    75%{transform: translate(-10% ) rotate(-1deg);}
+}
+.work-title:hover .char:nth-child(2){
+    transform: translate(10%,-20%) rotate(-5deg);
+    transition-delay: calc(500ms+210ms);
+    animation-delay: 10s;
+}
+.work-title:hover .char:nth-child(3){
+    transform: translate(5%,15%) rotate(3deg);
+    transition-delay: calc(500ms+150ms);
+    animation-duration: 3s;
+}
+.work-title:hover .char:nth-child(4){
+    transform: translate(15%,-15%) rotate(5deg);
+    transition-delay: calc(500ms+270ms);
+    animation-duration: 5s;
+}
+.work-title:hover .char:nth-child(5){
+    transform: translate(5%,3%) rotate(2deg);
+    transition-delay: calc(500ms+750ms);
+    animation-duration: 7s;
+}
+.work-title:hover .char:nth-child(6){
+    transform: translate( -8%, 15%) rotate(-8deg);
+    transition-delay: calc(500ms+515ms);
+    animation-duration: 3s;
+}
+.work-title:hover .char:nth-child(7){
+    transform: translate(-10% ,-14%) rotate(-4deg);
+    transition-delay: calc(500ms+350ms);
+    animation-duration: 5s;
+}
+.work-title:hover .char:nth-child(8){
+    transform: translate(7%,4%) rotate(-2deg);
+    transition-delay: calc(500ms+700ms);
+    animation-duration: 7s;
+}
+.work-title:hover .char:nth-child(9){
+    transform: translate(8%,-7%) rotate(-4deg);
+    transition-delay: calc(500ms+550ms);
+    animation-duration: 10s;
+}
+.work-title:hover .char:nth-child(10),.work-title:hover .char:last-child{
+    animation: revBar .7s forwards .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+@keyframes revBar {
+    0%,65%,100%{transform: translate(0 0) rotate(0);}
+    50%{transform: translate(50%, -5%) rotate(3deg);}
+}

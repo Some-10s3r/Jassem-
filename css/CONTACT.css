@@ -1,0 +1,67 @@
+.contact__section{
+  background: var(--Primary-bg);
+}
+.getInTouch{
+  position: absolute;
+  padding: .5rem 1rem 0 1rem;
+  background-color: var(--Primary-bg);
+  transform: translate(.8rem , -1.5rem);
+  border-radius: 15px;
+  box-shadow: 10px 8px 15px var(--border-2),
+              inset -10px 8px 25px var(--border-1),
+              inset 10px -8px 12px var(--border-2);
+  transition: all .5s cubic-bezier(.78,-0.86,.27,1.64);
+}
+.getInTouch:hover {
+    scale: 1.15;
+}
+.getInTouch h1{
+  color: var(--head-titles);
+  text-shadow:0 0 20px var(--head-titles);
+  animation: title-glow 5s infinite;
+}
+.contact__me{
+  margin: 0 0 0 1.5rem;
+  background-color: var(--Secondary-bg);
+  border-radius: 36px 0 0 36px;
+  box-shadow: inset -5px -5px 10px var(--border-2),
+              inset 5px 5px 10px var(--border-1);
+}
+.contact__container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact__p{
+  color:var(--light);
+  text-shadow: var(--light);
+  margin: 2em 0 .5em .5em;
+}
+.awesome{
+  color: #139bb6;
+  text-shadow: #139bb6;
+  cursor:grab;
+  animation: colors 3s infinite alternate 5s;
+  animation-play-state: paused;
+}
+.awesome:hover{animation-play-state: running;}
+@keyframes colors {
+  0%{color: #139bb6;text-shadow: #139bb6}
+  20%{color: #366ff3;text-shadow: #366ff3}
+  40%{color: #ae22d9;text-shadow: #ae22d9}
+  60%{color: #e637c9;text-shadow: #e637c9}
+  80%{color: #d51e4f;text-shadow: #d51e4f}
+  90%{color: #e77c24;text-shadow: #e77c24}
+}
+.contact__button{
+  background-color: #E1306C;
+  border: 2px solid #eb5486;
+  letter-spacing: .1em;
+  border-radius: 7px;
+  padding: .2rem; 
+  margin: 1rem .5rem 2rem 3rem;
+  box-shadow: 2px 4px 10px 0px #921941;
+  transform: translate(2.5em);
+  transition:all .3s ease-out;
+}  
