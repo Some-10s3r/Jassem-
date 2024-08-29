@@ -42,26 +42,65 @@
   color: #139bb6;
   text-shadow: #139bb6;
   cursor:grab;
-  animation: colors 3s infinite alternate 5s;
-  animation-play-state: paused;
+  animation: colors 3s infinite alternate;
 }
-.awesome:hover{animation-play-state: running;}
+.awesome:hover{animation-play-state: paused;}
 @keyframes colors {
-  0%{color: #139bb6;text-shadow: #139bb6}
-  20%{color: #366ff3;text-shadow: #366ff3}
-  40%{color: #ae22d9;text-shadow: #ae22d9}
-  60%{color: #e637c9;text-shadow: #e637c9}
-  80%{color: #d51e4f;text-shadow: #d51e4f}
-  90%{color: #e77c24;text-shadow: #e77c24}
+  0% {color: #139bb6;text-shadow:0 0 3px #139bb6}
+  20%{color: #366ff3;text-shadow:0 0 3px #366ff3}
+  40%{color: #ae22d9;text-shadow:0 0 3px #ae22d9}
+  60%{color: #e637c9;text-shadow:0 0 3px #e637c9}
+  80%{color: #d51e4f;text-shadow:0 0 3px #d51e4f}
+  90%{color: #e77c24;text-shadow:0 0 3px #e77c24}
 }
 .contact__button{
-  background-color: #E1306C;
-  border: 2px solid #eb5486;
+  border: 2px solid rgba(0, 0, 0, 0.7);
   letter-spacing: .1em;
   border-radius: 7px;
-  padding: .2rem; 
+  padding: .2rem .4rem; 
   margin: 1rem .5rem 2rem 3rem;
-  box-shadow: 2px 4px 10px 0px #921941;
   transform: translate(2.5em);
-  transition:all .3s ease-out;
-}  
+  transition: all .5s cubic-bezier(.78,-0.86,.27,1.64);
+  animation: colors2 5s linear infinite;
+  animation-play-state: paused;
+} 
+.contact__button:hover{
+  letter-spacing: .15em;
+  border-radius: 5px 15px;
+  padding: .2rem 1em;
+  transform: translate(2.5em) scale(1.25);
+  animation-play-state: running;
+}
+@keyframes colors2 {
+  0%,100%{background-color: #139bb6;text-shadow:0 0 3px #139bb6;box-shadow: 2px 4px 8px 0px #139bb6;}
+  20%{background-color: #366ff3;text-shadow:0 0 3px #366ff3;box-shadow: 2px 4px 8px 0px #366ff3;}
+  40%{background-color: #ae22d9;text-shadow:0 0 3px #ae22d9;box-shadow: 2px 4px 8px 0px #ae22d9;}
+  60%{background-color: #e637c9;text-shadow:0 0 3px #e637c9;box-shadow: 2px 4px 8px 0px #e637c9;}
+  80%{background-color: #d51e4f;text-shadow:0 0 3px #d51e4f;box-shadow: 2px 4px 8px 0px #d51e4f;}
+  90%{background-color: #e77c24;text-shadow:0 0 3px #e77c24;box-shadow: 2px 4px 8px 0px #e77c24;}
+}
+.contact__button::after{
+  content: "🙂";
+}
+.contact__button:hover::after{
+  content: "😁";   
+}
+.contact__button span.waveHand{
+  display:inline-block;
+  opacity: 0;
+  rotate: -20deg;
+  scale: .8;
+  transform: translate(13px,7px);
+  transition: all .3s ease;
+}
+.contact__button:hover span.waveHand{
+  animation: waveHand .7s linear forwards;
+  opacity: 1;
+  transform: translate(13px,1px);
+  animation-delay: .2s;
+  transition-delay: .1s;
+}
+@keyframes waveHand {
+  0%,50%{transform: translate(13px,1px) rotate(0);}
+  25%,75%,100%{transform: translate(10px,1px) rotate(-30deg);}
+}

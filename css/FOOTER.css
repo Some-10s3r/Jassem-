@@ -51,15 +51,15 @@
   justify-content: space-between;
   align-items: center;
   width: fit-content;
-  gap: 3em;
+  gap: 2em;
   flex-wrap: wrap;
-  margin: 2rem 0 0 0;
+  margin: .2rem 0 0rem 0;
   padding: 0 5%;
 }
 @media screen and (max-width:768px) {
   .bottom__footer{
-    justify-content: space-around;
-    gap: .5rem;
+    justify-content: center;
+    gap: 0;
   }
 }
 .social__icons {
@@ -67,7 +67,6 @@
   justify-content: space-around;
   align-items: center;
   width: 170px;
-  padding: 1rem 0;
 }
 
 .footer__separator{
@@ -79,7 +78,7 @@
   font-family:'Combo', cursive;
   color: var(--light);
   opacity: .4;
-  padding: 1rem 0;
+  padding: 0 0 1em 0;
   letter-spacing: .2px;
 }
 .website__rights span{font-size: 1.2rem;}

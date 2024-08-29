@@ -209,10 +209,10 @@ display: none;
   }
 
   .active-bg{
-    top: 0;
-    right: 0;
+    top: 1em;
+    right: 1em;
     position: fixed;
-    border-radius:20px 0 10px 20px;
+    border-radius: 50px 10px 50px 10px;
     background: var(--Primary-bg);
     box-shadow: 10px 8px 15px var(--border-2),
     inset -10px 8px 25px var(--border-1),
