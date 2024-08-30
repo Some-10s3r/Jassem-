@@ -24,7 +24,7 @@
     width: 65%;
     height: 30%;
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:28.125rem) {
     .work_content{width: 100%;}
 }
 .work_content .work-title{
@@ -35,7 +35,7 @@
     text-shadow: 0 0 20px var(--head-titles);
 }
 .work_content .work-title span{font-size: 4rem;display: inline-block;transition: all .5s ease;transition-delay: .3s;}
-@media screen and (max-width:500px) {
+@media screen and (max-width:31.25rem) {
     .work_content .work-title,.work_content .work-title span{font-size: 1.5em;}
 }
 .work-slider{

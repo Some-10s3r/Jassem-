@@ -34,21 +34,31 @@
     margin: 0;
     padding: 0;
     font-family: 'Combo', cursive;
-    font-size: 21px;
+    font-size: 1.1rem;
     font-weight: 500;
     scroll-behavior: smooth;
     transition: .5s ;
     cursor:none; 
 }
 body{background: var(--Primary-bg);}
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+
 ::selection{
     color: var(--Secondary-bg);
     background: var(--light);
 }
 .cursor{
     position: fixed;
-    width: 25px;
-    height: 25px;
+    width: 2rem;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     border: 3.5px solid #fff;
     mix-blend-mode: difference;
@@ -63,8 +73,7 @@ body{background: var(--Primary-bg);}
     50%{background: #fff;}
 }
 .cursor-click{
-    width:35px;
-    height: 35px;
+    width:2.3rem;
     border: 3.5px dashed #fff;
     animation: curClck 2.7s linear infinite;
     animation-delay: .2s;
@@ -77,11 +86,11 @@ body{background: var(--Primary-bg);}
                                     /*! this is the scroll snap css*/
 html{
     scroll-snap-type: y mandatory;
-    scroll-padding-top: 105px;
+    scroll-padding-top: 6.44rem;
 }
 .after__header--container{scroll-snap-align: start;scroll-snap-stop: always;}
 .work-bg{scroll-snap-align: start;scroll-snap-stop: always;}
-.contact__section{scroll-snap-align: start;scroll-snap-stop: always;scroll-margin-top: 110px;}
+.contact__section{scroll-snap-align: start;scroll-snap-stop: always}
 .footer__container{scroll-snap-align: start;scroll-snap-stop: always;}
                                     /*----------HEADER__BORDER---------*/
 
@@ -111,7 +120,7 @@ a::after{
     content:"";
     position: absolute;
     width: 100%;
-    height: 1.5px;
+    height: .1rem;
     bottom: 0;
     left: 0;
     border-radius: 50%;
@@ -127,7 +136,7 @@ a:hover::after{
 
 h1 ,h2{
     font-family: 'Oswald', sans-serif;
-    font-size: 23px;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 15px;
     color: var(--head-titles);
@@ -143,7 +152,7 @@ h1 ,h2{
     color: var(--logo-glow-2);
     font-family: 'Splash',cursive;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 2.2rem;
     text-decoration: none;
     text-shadow: 0 0 20px var(--logo-glow-2);
     animation: logo-glow 1s ease-in-out infinite alternate 2s;
@@ -190,8 +199,8 @@ p:has(span.JG){opacity: .4;}
 }
 
 #LightSwitch{
-    width: 50px;
-    height: 50px;
+    width: 3.15rem;
+    aspect-ratio: 1/1;
     mix-blend-mode: difference;
 }
 
