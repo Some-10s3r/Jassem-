@@ -168,19 +168,18 @@ h1 ,h2{
     text-shadow: 0 0 20px var(--logo-glow-2);
     }
 }
-
 ul{
     list-style: none;
+    display: table;
 }
-
 .nav-links li a:hover{
     color: var(--light);
 }
 
-
                             /*-------------------------------*/
 .after__header{
     height: 50vh;
+    height: 50svh;
     position: relative;
 }
 

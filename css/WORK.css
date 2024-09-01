@@ -1,6 +1,7 @@
 .work-section{
     background: var(--Primary-bg);
-    height: 90vh;
+    height: 80vh;
+    height: 80svh;
     width: 100%;
     margin-bottom: 4em;
     padding: 0 0 2em 0;
@@ -19,6 +20,7 @@
     justify-content: space-between;
     flex-direction: column;
     overflow: hidden;
+    position: relative;
 }
 .work_content{
     width: 65%;
@@ -34,9 +36,10 @@
     color: var(--head-titles);
     text-shadow: 0 0 20px var(--head-titles);
 }
+.work_content .work-title::after,.work_content .work-title:hover::after{background-color: var(--head-titles);border-radius: 50%;}
 .work_content .work-title span{font-size: 4rem;display: inline-block;transition: all .5s ease;transition-delay: .3s;}
 @media screen and (max-width:31.25rem) {
-    .work_content .work-title,.work_content .work-title span{font-size: 1.5em;}
+    .work_content .work-title,.work_content .work-title span{font-size: 3rem;}
 }
 .work-slider{
     max-width: calc(var(--quantity)*20em);

@@ -1,9 +1,11 @@
 .about-me{
     padding: 0 0 3em 0;
     background: var(--Primary-bg);
+    scroll-snap-type: y mandatory;
 }
 .wrapper {
-    height: calc(50vh - 1em);
+    height: calc(50vh - 1rem);
+    height: calc(50svh- 1rem);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -60,6 +62,7 @@
 .about-container-bg{
     background: var(--Primary-bg);
     height: 80vh;
+    height: 80svh;
     scroll-snap-align: start;
 }
 
@@ -79,24 +82,18 @@
 .half-content{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
-
+    gap: 3rem;
 }
 .about-me_content p {
-    padding: 15px;
 	font-size: 1.3rem;
-	line-height: 1.5;
-	margin-bottom: 30px;
+	line-height: 1.5em;
 }
-
 .about-me_content .skills {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin-top: 30px;
-	margin-bottom: 50px;
-    padding: 30px;
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -167,4 +164,5 @@
 	.about-me_content {flex-direction: column;}
     .about-me_content .skills li{filter: grayscale(0);}
     .about-container-bg{height: auto;}
+    .about-me_content .half-content:nth-child(2){scroll-snap-align: end;}
 }

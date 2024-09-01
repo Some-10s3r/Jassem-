@@ -36,7 +36,7 @@
 .contact__p{
   color:var(--light);
   text-shadow: var(--light);
-  margin: 2em 0 .5em .5em;
+  margin: 3rem 0 0 .8rem;
 }
 .awesome{
   color: #139bb6;
