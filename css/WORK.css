@@ -36,7 +36,8 @@
     color: var(--head-titles);
     text-shadow: 0 0 20px var(--head-titles);
 }
-.work_content .work-title::after,.work_content .work-title:hover::after{background-color: var(--head-titles);border-radius: 50%;}
+.work_content .work-title::after,.work_content .work-title:hover::after{background-color: var(--head-titles);transition-delay: .4s;}
+.work_content .work-title::before,.work_content .work-title:hover::before{background-color: var(--Hover-1);}
 .work_content .work-title span{font-size: 4rem;display: inline-block;transition: all .5s ease;transition-delay: .3s;}
 @media screen and (max-width:33.25rem) {
     .work_content .work-title,.work_content .work-title span{font-size: 3rem;}

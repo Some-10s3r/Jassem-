@@ -6,6 +6,7 @@ header{
     right: 0;
     height: 6.25rem;
 }
+header a::after,header a::before{display: none;}
 .header__container{
     background-color: var(--Primary-bg);
     display: flex;

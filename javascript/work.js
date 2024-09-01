@@ -34,10 +34,27 @@ const titleAnimate = async (prevCh,ch) => {
     };
     titleSeperate();
 };
+const titleAnimateV2 = ch=>{
+    let i = 0;
+    const interval = setInterval(()=>{
+        workTitle.innerText = workTitle.innerText.split('')
+        .map((letter,index)=>{
+            if(index<i){
+                return ch[index];
+            }
+            return String.fromCharCode(Math.floor(Math.random()*26)+97);
+        })
+        .join('');
+        if(i>=ch.length) clearInterval(interval);
+        i+=1/3;
+    },40)
+    titleSeperate();
+}
 const titleSeperate = () =>{
     workText = workTitle.textContent.split('');
     workTitle.innerHTML = "";
     workText.forEach(Char => {
+        
         const span = document.createElement("span");
         span.classList.add('char');
         span.innerText = Char;

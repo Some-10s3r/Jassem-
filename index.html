@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Combo&display=swap"> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"> 
 
+    <script defer src="javascript/observer.js"></script>
+
     <title>-Jassem'-</title>
 </head>
 
@@ -35,33 +37,31 @@
 <body>
               <!--!header section-->
   <div class="cursor"></div>
-
   <header>
-      <div class="header__container" id="header">
-          <div class="head-notch"><a class="logo__link" href="#"><p class="logo">-Jassem'-</p> </a></div>
-          <div class="head-notch">
+      <div class="header__container fadeOut" id="header">
+          <div class="head-notch fadeOut" style="--AnimDelay:1"><a class="logo__link" href="#"><p class="logo">-Jassem'-</p> </a></div>
+          <div class="head-notch fadeOut" style="--AnimDelay:2">
             <nav class="nav-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About </a></li>
-              <li><a href="#work">work</a></li>
-              <li><a href="#contact">contact</a></li>
+              <li><a class="fadeOut SlideOut" style="--AnimDelay:3;" href="#">Home</a></li>
+              <li><a class="fadeOut SlideOut" style="--AnimDelay:4;" href="#about">About </a></li>
+              <li><a class="fadeOut SlideOut" style="--AnimDelay:5;" href="#work">work</a></li>
+              <li><a class="fadeOut SlideOut" style="--AnimDelay:6;" href="#contact">contact</a></li>
             </nav>
           </div>
-          <div class="head-notch"><a href="src/Jassem' resume.pdf"><div class="btn-brdr"><button class="btn">resume`</button></div></a></div>
+          <div class="head-notch fadeOut" style="--AnimDelay:3;"><a href="src/Jassem' resume.pdf"><div class="btn-brdr"><button class="btn">resume`</button></div></a></div>
           
-          
-          <button onclick="onClickFunc()" class="hamburger">
+          <button onclick="onClickFunc()" class="hamburger fadeOut" style="--AnimDelay:3;">
               <span></span>
               <span></span>
               <span></span>
           </button>
       </div>
       <div class="hamb-bg">
-          <ul class="hamb-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About </a></li>
-              <li><a href="#work">work</a></li>
-              <li><a href="#contact">contact</a></li>
+          <ul class="hamb-links ScrollAnim SlideOut">
+              <li class="ScrollAnim SlideOut" style="--AnimDelay:1"><a href="#">Home</a></li>
+              <li class="ScrollAnim SlideOut" style="--AnimDelay:1"><a href="#about">About </a></li>
+              <li class="ScrollAnim SlideOut" style="--AnimDelay:1"><a href="#work">work</a></li>
+              <li class="ScrollAnim SlideOut" style="--AnimDelay:1"><a href="#contact">contact</a></li>
           </ul>
       </div>
   </header>
@@ -76,44 +76,42 @@
               <!--about section-->
   <section class="about-me work-hover">
               <!--about-main section-->               
-    <div class="wrapper">
-      <div class="about-header"><h1 class="about--title">- Who am I ..?</h1></div>
-        <div class="TypeAnime-container">
-          <p class="hello">Hello there! my name is <span class="JG">Jassem'</span> </p>
-        </div>
-        <hr class="hr">
-        <p class="typeParagraph">i love  <span id="typewriter"></span><span id="About-cursor">|</span></p>
+    <div class="wrapper fadeOut">
+      <div class="about-header fadeOut" style="--AnimDelay:1"><h1 class="about--title">- Who am I ..?</h1></div>
+      <div class="TypeAnime-container fadeOut" style="--AnimDelay:2">
+        <p class="hello">Hello there! my name is <span class="JG">Jassem'</span> </p>
       </div>
-      <div class="about-container-bg" id="about">
-        <div class="about-me_content">
-          <div class="half-content">
-            <p> I'm a web developer with a passion for creating beautiful and functional websites that provide a great user experience. I have experience in HTML, CSS, JavaScript, and more.</p>
-            <p>When I'm not coding , I'm always looking for ways to learn and grow, both personally and professionally.</p>
-            <p style="font-weight: 650;">Here are a few of my key skills:</p>
-            <ul class="skills">
-              <li style="--index:1">HTML</li>
-              <li style="--index:2">CSS</li>
-              <li style="--index:3">JavaScript</li>
-              <li style="--index:4">React</li>
-              <li style="--index:5">GitHub</li>
-            </ul>
-          </div>
-          <div class="half-content">
-            <img id="about-img" src="src/JG-b.png" alt="profile picture">
-          </div>
+      <hr class="hr">
+      <p class="typeParagraph fadeOut" style="--AnimDelay:3">i love  <span id="typewriter"></span><span id="About-cursor">|</span></p>
+    </div>
+    <div class="about-container-bg fadeOut" id="about">
+      <div class="about-me_content">
+        <div class="half-content fadeOut" style="--AnimDelay: 2">
+          <p> I'm a web developer with a passion for creating beautiful and functional websites that provide a great user experience. I have experience in HTML, CSS, JavaScript, and more.</p>
+          <p>When I'm not coding , I'm always looking for ways to learn and grow, both personally and professionally.</p>
+          <p style="font-weight: 650;">Here are a few of my key skills:</p>
+          <ul class="skills fadeOut" style="--AnimDelay:3">
+            <li style="--index:1 ;--AnimDelay:4" class="fadeOut SlideOut">HTML</li>
+            <li style="--index:2 ;--AnimDelay:5" class="fadeOut SlideOut">CSS</li>
+            <li style="--index:3 ;--AnimDelay:6" class="fadeOut SlideOut">JavaScript</li>
+            <li style="--index:4 ;--AnimDelay:7" class="fadeOut SlideOut">React</li>
+            <li style="--index:5 ;--AnimDelay:8" class="fadeOut SlideOut">GitHub</li>
+          </ul>
+        </div>
+        <div class="half-content fadeOut" style="--AnimDelay:1">
+          <img id="about-img" src="src/JG-b.png" alt="profile picture">
         </div>
       </div>
     </div>
   </section>
-
               <!--my work section-->
   <section class="work-section">
-    <div class="work-bg" id="work">
+    <div class="work-bg fadeOut" id="work">
       <div class="work_content">
-        <a href="https://some-10s3r.github.io/Dev_Tools-" class="work-title"><span class="char">|</span>Dev_Tools'</a>
-        <p class="work-desc">'Unleash your creativity with our three awesome tools: blob maker, gradient generator, and neumorphism creator. Design and copy the CSS. No more struggling with code—just pure design fun!'</p>
+        <a href="https://some-10s3r.github.io/Dev_Tools-" class="work-title" ><span class="char">|</span>Dev_Tools'</a>
+        <p class="work-desc fadeOut" style="--AnimDelay:1">'Unleash your creativity with our three awesome tools: blob maker, gradient generator, and neumorphism creator. Design and copy the CSS. No more struggling with code—just pure design fun!'</p>
       </div>
-      <div class="work-slider" style="--quantity:3" data-mouse-pos="0" data-prev-per="0" data-new-per="0" draggable="false">
+      <div class="work-slider fadeOut" style="--quantity:4;--AnimDelay:2" data-mouse-pos="0" data-prev-per="0" data-new-per="0" draggable="false">
         <img src="src/Dev_Tools'.png" data-work-header="Dev_Tools'" class="work-project" data-project-index="0" data-work-href="Dev_Tools-"draggable="false">
         <img src="src/BookOfFun.png"  data-work-header="BookOfFun"  class="work-project" data-project-index="1" data-work-href=""draggable="false">
         <img src="src/NeuScCalc.png"  data-work-header="NeuScCalc"  class="work-project" data-project-index="2" data-work-href=""draggable="false">
@@ -123,25 +121,25 @@
   </section>
               <!--!contact me section-->
 
-  <section class="contact__section">
+  <section class="contact__section fadeOut">
     <div class="contact__me">
-      <div class="getInTouch"><h1>Get in Touch'</h1></div>
+      <div class="getInTouch fadeOut" style="--AnimDelay:1"><h1>Get in Touch'</h1></div>
 
       <div class="contact__container">
-        <p class="contact__p">-" Want to collaborate on a project, discuss an idea,  <u class="awesome">or' just say hi  ?"</u></p>
-        <button class="contact__button">say` Hi <span class="waveHand">✋</span></button>
+        <p class="contact__p fadeOut" style="--AnimDelay:2">-" Want to collaborate on a project, discuss an idea,  <u class="awesome">or' just say hi  ?"</u></p>
+        <button class="contact__button fadeOut" style="--AnimDelay:3">say` Hi <span class="waveHand">✋</span></button>
       </div>
     </div>
   </section>
 
           <!--footer section-->
-  <section class="footer__container"  id="contact">
+  <section class="footer__container fadeOut"  id="contact">
       <div class="footer__links">
           <!--footer links section-->
 
 
         <div class="footer__link--wrapper">
-          <div class="footer__link--items">
+          <div class="footer__link--items fadeOut" style="--AnimDelay:1">
             <h1 class="Footer__titles">| About` me</h1>
             <a href="#work">My work</a>
             <a href="#about">about</a>
@@ -149,7 +147,7 @@
           </div>
 
 
-          <div class="footer__link--items">
+          <div class="footer__link--items fadeOut" style="--AnimDelay:3">
             <h1 class="Footer__titles">| Projects</h1>
             <a href="#">GameApp</a>
             <a href="#">Subline2</a>
@@ -159,15 +157,15 @@
         
         <div class="footer__link--wrapper">
 
-          <div class="footer__link--items">
+          <div class="footer__link--items fadeOut" style="--AnimDelay:2">
             <h1 class="Footer__titles">| Social Media</h1>
-            <a class="social__links" style="--delay: 1;--color: #4267B2;" href="https://linkedin.com">linkedin</a>
-            <a class="social__links" style="--delay: 2;--color: #E1306C;" href="https://Instagram.com">Instagram</a> 
-            <a class="social__links" style="--delay: 3;--color: #711270;" href="https://github.com">github</a>
-            <a class="social__links" style="--delay: 4;--color: #0077b5;" href="https://twitter.com">Twitter</a>
+            <a class="social__links fadeOut" style="--AnimDelay:7;--delay: 1;--color: #4267B2;" href="https://linkedin.com">linkedin</a>
+            <a class="social__links fadeOut" style="--AnimDelay:8;--delay: 2;--color: #E1306C;" href="https://Instagram.com">Instagram</a> 
+            <a class="social__links fadeOut" style="--AnimDelay:9;--delay: 3;--color: #711270;" href="https://github.com">github</a>
+            <a class="social__links fadeOut" style="--AnimDelay:10;--delay: 4;--color: #0077b5;" href="https://twitter.com">Twitter</a>
           </div>
           
-          <div class="footer__link--items">
+          <div class="footer__link--items fadeOut" style="--AnimDelay:4">
             <h1 class="Footer__titles">| Contact` me</h1>
             <a href="#contact">Via e-mail</a>
             <a href="#contact">Phone number</a>
@@ -180,27 +178,27 @@
           <!--bottom footer section-->
       <section class="bottom__footer">
           <div>
-            <a class="logo__link" href="#"><p class="logo">-Jassem'-</p> </a>
+            <a class="logo__link" href="#"><p class="logo fadeOut" style="--AnimDelay:5">-Jassem'-</p> </a>
           </div>
           
-          <p class="website__rights">Designed & Build by <span class="JG">-Jassem'-</span></p>
+          <p class="website__rights fadeOut" style="--AnimDelay:6">Designed & Build by <span class="JG">-Jassem'-</span></p>
 
           <!-- social icons section -->
           
           <div class="social__icons">
-            <a href="https://linkedin.com" class="social__icon--link "style="--color:#4267B2;--delay: 1;">
+            <a href="https://linkedin.com" class="social__icon--link fadeOut"style="--color:#4267B2;--delay: 1;--AnimDelay:7">
               <i class="fab fa-linkedin"></i>
             </a>
 
-            <a href="https://instagram.com" class="social__icon--link "style="--color:#E1306C;--delay: 2;">
+            <a href="https://instagram.com" class="social__icon--link fadeOut"style="--color:#E1306C;--delay: 2;--AnimDelay:8">
               <i class="fab fa-instagram"></i>
             </a>
 
-            <a href="https://github.com" class="social__icon--link "style="--color:#711270;--delay: 3;">
+            <a href="https://github.com" class="social__icon--link fadeOut"style="--color:#711270;--delay: 3;--AnimDelay:9">
               <i class="fab fa-github"></i>
             </a>
 
-            <a href="https://twitter.com" class="social__icon--link "style="--color:#0077b5;--delay: 4;">
+            <a href="https://twitter.com" class="social__icon--link fadeOut"style="--color:#0077b5;--delay: 4;--AnimDelay:10">
               <i class="fab fa-twitter"></i>
             </a>
 
