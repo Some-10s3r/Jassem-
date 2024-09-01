@@ -25,11 +25,13 @@
 .footer__links {
   display: flex;
   justify-content: center;
-  padding: 0 0 0 2.5rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .footer__link--wrapper {
   display: flex;
+  gap: 1.5rem;
 }
 
 .footer__link--items {
@@ -37,7 +39,6 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 1rem;
-  width: 10rem;
 }
 .footer__link--items:hover .social__links{animation: none;}
 .social__links{

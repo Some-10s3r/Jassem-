@@ -148,7 +148,6 @@
     70% {background-color: #27f8a4;text-shadow: 0 0 20px #27f8a4;}
     90% {background-color: #2731f8;text-shadow: 0 0 20px #2731f8;}
 }
-  
 .about-me_content img {
     width: 100%;
     aspect-ratio: 2/1;
@@ -159,7 +158,6 @@
 		flex-direction: row-reverse;
 	}
 }
-
 @media (max-width: 48rem) {
 	.about-me_content {flex-direction: column;}
     .about-me_content .skills li{filter: grayscale(0);}

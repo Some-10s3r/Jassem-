@@ -56,6 +56,7 @@ body::-webkit-scrollbar {
     background: var(--light);
 }
 .cursor{
+    display: none;
     position: fixed;
     width: 2rem;
     aspect-ratio: 1/1;
@@ -68,6 +69,7 @@ body::-webkit-scrollbar {
     transition: .01s;
     z-index: 999999;
 }
+@media (pointer:fine){.cursor{display: block;}}
 @keyframes cursor {
     48%,52%{background: none;}
     50%{background: #fff;}
