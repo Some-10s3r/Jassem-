@@ -1,5 +1,5 @@
 const observedEls = document.querySelectorAll('.fadeOut');
-const staggerObservedEls = document.querySelectorAll('.slideOut')
+const staggerObservedEls = document.querySelectorAll('.slideOut');
 const observer = new IntersectionObserver(entries =>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
@@ -8,6 +8,15 @@ const observer = new IntersectionObserver(entries =>{
             entry.target.classList.remove('fadeIn')
         }
     })
-},{threshold:0.5});
+},{threshold:0.2});
+const staggerObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('slideIn')
+        }else{
+            entry.target.classList.remove('slideIn')
+        }
+    })
+},{threshold:0.2});
 observedEls.forEach(el=>{observer.observe(el)});
-staggerObservedEls.forEach(el=>{staggerObserver.observe(el)});
+staggerObservedEls.forEach(stagEl=>{staggerObserver.observe(stagEl)});

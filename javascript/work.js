@@ -3,65 +3,44 @@ const images = document.querySelectorAll('.work-project');
 let IQuant = images.length;
 const workTitle = document.querySelector('.work-title');
 const workDesc = document.querySelector('.work-desc');
-Descs = [
+const Descs = [
     "'Unleash your creativity with our three awesome tools: blob maker, gradient generator, and neumorphism creator. Design and copy the CSS. No more struggling with code—just pure design fun!'",
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae animi, corrupti doloremque ducimus laudantium magni iure cupiditate quibusdam at inventore!",
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae animi, corrupti doloremque ducimus laudantium magni iure cupiditate quibusdam at inventore!"
 ];
-Symbols= ["@","#","$",'&',"%","^"];
+const Symbols= ["@","#","$",'&',"%","^"];
+const letters ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // functions :
-const titleAnimate = async (prevCh,ch) => {
-    for(let i =prevCh.length;i>1;i--){
-        await new Promise((resolve) => setTimeout(resolve, 100));
-        workTitle.innerText = prevCh.substring(0,i - 1);
-    }
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    for(let i=1;i<ch.length;i++){
-        if(i>=Symbols.length){
-            workTitle.innerText += "-";
-        }else{
-        workTitle.innerText += Symbols[i];
-        };
-        await new Promise((resolve) => setTimeout(resolve, 150));
-    }
-    await new Promise((resolve) => setTimeout(resolve, 200));
-    let lastCh = workTitle.innerText;
-    ch = "|"+ch;
-    for(let i = 1;i<ch.length+1;i++){
-        await new Promise((resolve) => setTimeout(resolve, 150));
-        workTitle.innerText = (ch.substring(0,i)+lastCh.substring(i+1,ch.length)).split("^")[0];
-    };
-    titleSeperate();
-};
-const titleAnimateV2 = ch=>{
+const titleAnimateV2 = e=>{
     let i = 0;
     const interval = setInterval(()=>{
-        workTitle.innerText = workTitle.innerText.split('')
+        workTitle.innerText = e.target.dataset.workHeader.split("")
         .map((letter,index)=>{
             if(index<i){
-                return ch[index];
+                return e.target.dataset.workHeader[index]
             }
-            return String.fromCharCode(Math.floor(Math.random()*26)+97);
+            return letters[Math.floor(Math.random()*letters.length)]
         })
-        .join('');
-        if(i>=ch.length) clearInterval(interval);
-        i+=1/3;
-    },40)
-    titleSeperate();
+        .join("")
+        if(i>=e.target.dataset.workHeader.length){
+            clearInterval(interval)
+            titleSeperate()
+        };
+        i+=1/2;
+    },30);
 }
 const titleSeperate = () =>{
-    workText = workTitle.textContent.split('');
+    workText = workTitle.innerText.split('');
     workTitle.innerHTML = "";
     workText.forEach(Char => {
-        
         const span = document.createElement("span");
         span.classList.add('char');
         span.innerText = Char;
         workTitle.appendChild(span);
     });
 };
-//ui & logic:
+// logic:
 
 titleSeperate();
 slider.addEventListener('pointerdown',e=>{
@@ -94,10 +73,10 @@ slider.addEventListener('pointerleave',e=>{
 })
 for(const image of images){
     image.addEventListener("dblclick",e=>{
-        let newWorkHeader = image.dataset.workHeader;
-        let prevWorkHeader = workTitle.innerText;
-        workTitle.href = `https://some-10s3r.github.io/${image.dataset.workHref}`
-        workDesc.textContent = Descs[parseInt(image.dataset.projectIndex)]
-        titleAnimate(prevWorkHeader,newWorkHeader); 
+        images.forEach(image=>{image.classList.remove('proj-active')});
+        e.target.classList.add('proj-active');
+        workTitle.href = `https://some-10s3r.github.io/${image.dataset.workHref}`;
+        workDesc.textContent = Descs[parseInt(image.dataset.projectIndex)];
+        titleAnimateV2(e);
     });
 };
