@@ -66,11 +66,12 @@
 }
 
 /* work-title transitions and animations */
-.work-title:hover .char{animation: wiggly 2s infinite;}
+.work-title:hover .char{animation: wiggly 2s infinite;transition: all .5s;}
 @keyframes wiggly {
     0%,100%{translate:0 0px;}
     50%{translate:0 5px;}
-}
+}   
+
 .work-title:hover .char{animation: wiggly 2s infinite ;transition-delay: none;animation-delay: .3s}
 .work-title:hover .char:nth-child(1){
     animation: bar 1s forwards cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -121,6 +122,7 @@
     animation-duration: 10s;
 }
 .work-title:hover .char:nth-child(10),.work-title:hover .char:last-child{
+    transform: skewY(150deg);
     animation: revBar .7s forwards .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 @keyframes revBar {
