@@ -40,7 +40,7 @@
     transition: .5s ;
     cursor:none; 
 }
-body{background: var(--Primary-bg);}
+body{background: var(--Primary-bg)}
 html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;

@@ -5,4 +5,12 @@
     --gradient-color-2: #e6cdb5; 
     --gradient-color-3: #a212fc;
     --gradient-color-4: #fb2171;
+    
+    filter: grayscale(1);
+    animation: gradCanvas 1.5s forwards ease-in;
+}
+@keyframes gradCanvas {
+    to{
+        filter: grayscale(0);
+    }
 }
