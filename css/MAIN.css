@@ -64,8 +64,19 @@ body::-webkit-scrollbar {
     pointer-events: none;
     animation: cursor 20s linear infinite;
     transition: .01s;
-    z-index: 999999;
+    z-index: 999;
+    animation:wobble 1s linear forwards infinite;
 }
+@keyframes wobble {
+    0%, 100% {border-radius: 50%;}
+    25%,30% {border-radius: 37% 63% 36% 64% / 54% 40% 60% 46%;}
+    30%,40% {border-radius: 35% 65% 40% 58% / 65% 35% 63% 38%;}
+    40%,55% {border-radius: 32% 68% 47% 53% / 72% 32% 68% 28%;}
+    55%,70% {border-radius: 42% 58% 54% 46% / 43% 40% 60% 57%;}
+    70%,85% {border-radius: 42% 58% 54% 46% / 43% 40% 60% 57%;}
+    85%,100%{border-radius: 59% 41% 58% 42% / 39% 59% 41% 61% ;}
+}
+
 @media (pointer:fine){.cursor{display: block;}}
 @keyframes cursor {
     48%,52%{background: none;}
