@@ -38,7 +38,7 @@
     font-weight: 500;
     scroll-behavior: smooth;
     transition: .5s ;
-    cursor:none; 
+    cursor:none;
 }
 body{background: var(--Primary-bg)}
 html, body {
@@ -46,7 +46,7 @@ html, body {
     -ms-overflow-style: none;
 }
 body::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 ::selection{
     color: var(--Secondary-bg);
@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
     pointer-events: none;
     animation: cursor 20s linear infinite;
     transition: .01s;
-    z-index: 999;
+    z-index: 9999;
     animation:wobble 1s linear forwards infinite;
 }
 @keyframes wobble {
@@ -221,7 +221,7 @@ p:has(span.JG){opacity: .4;}
     background: #131313;
     border: 3px solid #ddcafa;
     border-radius:  20px 0  0 20px ;
-    z-index: 9999;
+    z-index: 99;
     position: fixed;
     bottom: .7rem;
     right: 0;
