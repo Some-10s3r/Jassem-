@@ -48,6 +48,7 @@ html, body {
 body::-webkit-scrollbar {
     display: none;
 }
+
 ::selection{
     color: var(--Secondary-bg);
     background: var(--light);

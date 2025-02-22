@@ -164,8 +164,9 @@
         opacity: .7;
         height: calc(100% + 5em);
         width: calc(100% + 5em);
+        z-index: 0;
     }
-    .profs{translate: 50rem;}
+    .profs{translate: 50rem;z-index: 1;}
 
     .profs:nth-child(1){
         translate: 0 -200%;
