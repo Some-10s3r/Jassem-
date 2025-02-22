@@ -56,17 +56,18 @@ body::-webkit-scrollbar {
 .cursor{
     display: none;
     position: fixed;
-    width: 2rem;
+    width: 1.5rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 3.5px solid #fff;
+    background: #fff;
     mix-blend-mode: difference;
     transform: translate(-50%,-50%);
     pointer-events: none;
-    animation: cursor 20s linear infinite;
+    /* animation: cursor 20s linear infinite; */
     transition: .01s;
     z-index: 9999;
-    animation:wobble 1s linear forwards infinite;
+    /* animation:wobble 1s linear forwards infinite; */
 }
 @keyframes wobble {
     0%, 100% {border-radius: 50%;}
@@ -84,7 +85,7 @@ body::-webkit-scrollbar {
     50%{background: #fff;}
 }
 .cursor-click{
-    width:2.3rem;
+    width:1.3rem;
     border: 3.5px dashed #fff;
     animation: curClck 2.7s linear infinite;
     animation-delay: .2s;
